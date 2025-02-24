@@ -1,7 +1,6 @@
 import { industries } from "@/config/data/industries";
 import { integrations } from "@/config/data/integrations";
 import { siteConfig } from "@/config/site";
-import { routing } from "@/i18n/routing";
 
 
 export default async function sitemap() {
@@ -10,11 +9,7 @@ export default async function sitemap() {
   const industryRoutes = industries.map((industry) => ({
     url: `${BASE_URL}/industries/${industry?.slug}`,
     lastModified: industry?.updatedAt || new Date(),
-    alternates: {
-      languages: 
-       {en:  `${BASE_URL}/${"en"}/industries/${industry?.slug}`}
-      
-    }
+   
   }));
 
   // Dynamic pages for integrations
