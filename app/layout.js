@@ -7,10 +7,6 @@ import { siteConfig } from "../config/site";
 import { ToastProvider } from "@/components/shared/toast/ToastContext";
 import { WebSocketProvider } from "./context/WebSocketContext";
 import { Toaster } from "@/components/dashboard/shared/ui/toaster";
-import { getLocale, getMessages } from "next-intl/server";
-import { NextIntlClientProvider } from "next-intl";
-import { routing } from "@/i18n/routing";
-import NotFound from "./not-found";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -71,23 +67,13 @@ export const metadata = {
   },
 };
 
- 
-// export async function generateStaticParams() {
-//   return routing.locales.map((locale) => ({locale}));
-// }
-
 const FACEBOOK_PIXEL_ID = "1873337013093110"; // Replace with your Facebook Pixel ID
 const GOOGLE_ANALYTICS_ID = "G-G512R7ZLXZ"; // Replace with your Google Analytics ID
 
-export default async function RootLayout({ children, params }) {
-  const { locale } = await params;
-  if (!routing.locales.includes(locale)) {
-    NotFound();
-  }
-  // const locale = await getLocale();
-  const messages = await getMessages();
+export default async function RootLayout({ children }) {
+
   return (
-    <html lang={locale} suppressHydrationWarning>
+    <html lang="en" >
       <head>
         {process.env.ENV === "PROD" && (
           <>
@@ -100,9 +86,7 @@ export default async function RootLayout({ children, params }) {
         <StoreProvider>
           <WebSocketProvider>
             <ToastProvider>
-              <NextIntlClientProvider messages={messages}>
                 {children}
-              </NextIntlClientProvider>
             </ToastProvider>
             <Toaster />
           </WebSocketProvider>
