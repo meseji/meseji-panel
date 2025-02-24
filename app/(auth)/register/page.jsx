@@ -7,7 +7,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 
-export default function Register() {
+export default function Home() {
   const [form, setForm] = useState({
     name: "",
     phone_number: "",
