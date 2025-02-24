@@ -1,0 +1,242 @@
+{
+  "auth": {
+    "login": {
+      "title": "Welcome to Login Page",
+      "description": "Sign in to continue"
+    },
+    "register": {
+      "title": "Welcome to Register Page",
+      "description": "Sign up to continue"
+    }
+  },
+  "cta": {
+    "title": "अपने व्यवसाय संचार को ऊंचा करने के लिए तैयार हैं?",
+    "description": "डिस्कवर करें कि मेसजी आपके ग्राहक की व्यस्तता को कैसे बदल सकते हैं।",
+    "button": "एक डेमो बुक करें"
+  },
+  "home": {
+    "hero": {
+      "title": "कनेक्ट, संलग्न और व्हाट्सएप के साथ बढ़ें",
+      "subtitle": "मल्टी-चैनल मार्केटिंग सॉल्यूशंस का उपयोग करके ग्राहकों के साथ जुड़ने का एक सहज तरीका।",
+      "buttons": {
+        "free_trial": "मुफ्त परीक्षण",
+        "book_demo": "एक डेमो बुक करें"
+      },
+      "links": {
+        "free_trial": "/register?ref=marketing-free",
+        "book_demo": "https://cal.com/meseji/30min"
+      }
+    },
+    "howDo": {
+      "tag": "उत्पादों",
+      "title": "लाभ",
+      "description": "मेसजी की शक्ति का अनुभव करें - जहां नवाचार सादगी को पूरा करता है।",
+      "items": {
+        "broadcast": {
+          "icon": "broadcastM",
+          "title": "प्रसारण",
+          "description": "सगाई, रूपांतरण, और ग्राहक वफादारी के अनुरूप संचार के साथ बढ़ाएं।"
+        },
+        "automation": {
+          "icon": "automationM",
+          "title": "स्वचालन",
+          "description": "निर्बाध संचालन के लिए अपने व्यावसायिक चैट की जरूरतों के अनुरूप कस्टम वर्कफ़्लो बनाएं।"
+        },
+        "tracking": {
+          "icon": "globeM",
+          "title": "ट्रैक करना",
+          "description": "वास्तविक समय में ग्राहक व्यवहार, अभियान प्रदर्शन, चैट और बिक्री मेट्रिक्स की निगरानी करें।"
+        },
+        "crm": {
+          "icon": "crmM",
+          "title": "सीआरएम",
+          "description": "व्यक्तिगत अनुभवों को देने के लिए ग्राहक इंटरैक्शन, वरीयताएँ और खरीद इतिहास।"
+        }
+      }
+    },
+    "features": {
+      "tag": "विशेषताएँ",
+      "title": "हम क्या प्रदान करते हैं",
+      "service": [
+        {
+          "title": "Broadcasting Made Easy with Meseji",
+          "description": "Simplify your customer communication with Meseji's broadcasting tools. Create, schedule, and send messages across multiple channels effortlessly while tracking performance and automating responses.",
+          "features": [
+            "Broadcast to multiple channels seamlessly",
+            "Schedule messages with ease",
+            "Track message performance in real-time",
+            "Automate responses for better engagement"
+          ],
+          "image": "https://ik.imagekit.io/g689orrur/meseji-marketing-assets/whatsapp-chat.png",
+          "Buttonlink": "/register?ref=mark-feat-message",
+          "ButtonText": "Get Started"
+        },
+        {
+          "title": "WhatsApp Business Flow Builder",
+          "description": "Automate customer interactions on WhatsApp with our drag-and-drop flow builder. Simplify workflows, integrate with CRMs, and enhance engagement with automated responses.",
+          "features": [
+            "Intuitive drag-and-drop interface",
+            "Integrate seamlessly with CRMs",
+            "Automate responses for quick support"
+          ],
+          "image": "https://ik.imagekit.io/g689orrur/meseji-marketing-assets/flow-meseji.webp",
+          "Buttonlink": "/register?ref=mark-feat-flow",
+          "ButtonText": "Get Started"
+        },
+        {
+          "title": "Shared Inbox for Teams and Businesses",
+          "description": "Streamline team collaboration with Meseji's shared inbox. Manage customer conversations, assign tasks, and organize messages to improve customer satisfaction.",
+          "features": [
+            "Assign conversations to team members",
+            "Tag messages for better organization",
+            "Manage all customer conversations in one place"
+          ],
+          "image": "https://ik.imagekit.io/g689orrur/meseji-marketing-assets/meseji-chat-optim.webp",
+          "Buttonlink": "/register?ref=mark-feat-inbox",
+          "ButtonText": "Get Started"
+        },
+        {
+          "title": "Seamless Meta Ads Integration",
+          "description": "Manage and optimize your Facebook and Instagram ad campaigns effortlessly with Meseji. Create engaging ads, track performance, and maximize your ROI.",
+          "features": [
+            "Easily create engaging ad campaigns",
+            "Track ad performance metrics",
+            "Optimize campaigns for maximum ROI"
+          ],
+          "image": "https://ik.imagekit.io/g689orrur/meseji-marketing-assets/whatsapp-meta-ads.jpg",
+          "Buttonlink": "/register?ref=mark-feat-ads",
+          "ButtonText": "Get Started"
+        }
+      ]
+    },
+    "solutions": {
+      "tag": "Solution",
+      "title": "व्यापक व्हाट्सएप समाधान",
+      "description": "हमारी उच्च गुणवत्ता, लागत प्रभावी सेवा के साथ सहज व्हाट्सएप संदेश का अनुभव करें।",
+      "revolutionary_project": {
+        "title": "क्रांतिकारी परियोजना",
+        "description": "योजना और संरचना काम कैसे आप चाहते हैं। \nजल्दी से कार्यों का आयोजन।"
+      },
+      "app_integrations": {
+        "title": "ऐप एकीकरण",
+        "description": "अपने सभी टूल और डेटा को एक साथ लाएं। \nसैकड़ों अन्य ऐप्स के साथ भी जुड़ें।"
+      },
+      "data_reporting": {
+        "title": "आंकड़ा रिपोर्टिंग",
+        "description": "प्रगति में वास्तविक समय की अंतर्दृष्टि प्राप्त करें और टीमों को अपनी काम की आदतों को ट्रैक करने की अनुमति देता है।"
+      },
+      "workflow_builder": {
+        "title": "वर्कफ़्लो बिल्डर",
+        "description": "अपनी टीमों को समन्वित करने और संचार बढ़ाने के लिए स्वचालित प्रक्रियाएं।"
+      }
+    },
+    "blog": {
+      "title": "स्मार्ट बनें, समय बचाएं",
+      "description": "विकास, विपणन, प्रसारण, बातचीत, और उत्पादकता पर नवीनतम लेख प्राप्त करें, जो आपके इनबॉक्स में सीधे वितरित किए गए हैं। \nइसके अलावा व्हाट्सएप बिजनेस एपीआई, चैटबॉट, और बहुत कुछ के बारे में ज्ञान प्राप्त करें।",
+      "form": {
+        "label": "Email address",
+        "cta": "अब शामिल हों",
+        "info": "हर हफ्ते मुफ्त अपडेट प्राप्त करने के लिए जुड़ें"
+      },
+      "articles": [
+        {
+          "title": "बल्क व्हाट्सएप मैसेजिंग के लिए 10 सिद्ध रणनीतियाँ",
+          "description": "बल्क व्हाट्सएप मैसेजिंग सीधे आपके ग्राहकों तक पहुंचने और बिक्री को चलाने के लिए एक अविश्वसनीय रूप से प्रभावी उपकरण है।",
+          "category": "विपणन",
+          "readTime": "5 मिनट पढ़ें",
+          "link": "/blog/10-proven-strategies-for-bulk-whatsapp-messaging-that-drive-sales",
+          "image": "https://cdn.hashnode.com/res/hashnode/image/upload/v1733162680291/fea3153c-c305-48a0-9804-6aadfb2becab.png?w=1600&h=840&fit=crop&crop=entropy&auto=compress,format&format=webp"
+        },
+        {
+          "readTime": "4 मिनट पढ़ें",
+          "category": "प्रसारण",
+          "title": "शीर्ष 5 बल्क व्हाट्सएप मैसेजिंग के लिए मामलों का उपयोग करें",
+          "description": "व्हाट्सएप ग्राहकों के साथ जुड़ने के लिए व्यवसायों के लिए एक शक्तिशाली उपकरण है।",
+          "link": "blog/top-5-use-cases-for-bulk-whatsapp-messaging-in-marketing-and-customer-service",
+          "image": "https://cdn.hashnode.com/res/hashnode/image/upload/v1733162562242/cd070609-61b8-487a-a852-65608caa32a9.png?w=1600&h=840&fit=crop&crop=entropy&auto=compress,format&format=webp"
+        },
+        {
+          "description": "व्यवसाय लगातार अपने ग्राहकों के साथ पहुंचने और संलग्न होने के लिए अभिनव और कुशल तरीकों की तलाश कर रहे हैं।",
+          "title": "व्यापार के लिए व्हाट्सएप एपीआई का उपयोग करने के लिए नहीं है",
+          "category": "उत्पादकता",
+          "readTime": "4 मिनट पढ़ें",
+          "link": "/blog/the-dos-and-donts-of-using-whatsapp-api-for-business",
+          "image": "https://cdn.hashnode.com/res/hashnode/image/upload/v1733162657849/d4423407-7c75-46be-87fa-25ef19911a5c.png?w=1600&h=840&fit=crop&crop=entropy&auto=compress,format&format=webp"
+        }
+      ]
+    },
+    "title": "Why WhatsApp?",
+    "description": "WhatsApp is the most popular messaging app in the world.",
+    "stats": {
+      "openRates": "Open Rates",
+      "clickRates": "Click Rates",
+      "activeUsers": "Active Users"
+    }
+  },
+  "integrations": {
+    "title": "App Integrations",
+    "description": "Over 20 top applications can be effortlessly integrated with Segment. You can also create your own custom integrations.",
+    "cta": "All Integrations",
+    "apps": {
+      "slack": {
+        "title": "Slack",
+        "description": "Slack is a messaging app for teams. It brings all your team's communication and files in one place, where they're instantly searchable and available wherever you go."
+      },
+      "salesforce": {
+        "title": "Salesforce",
+        "description": "Salesforce is a customer relationship management solution that brings companies and customers together. It's one integrated CRM platform that gives all your departments — including marketing, sales, commerce, and service — a single, shared view of every customer."
+      },
+      "hubspot": {
+        "title": "HubSpot",
+        "description": "HubSpot offers a full platform of marketing, sales, customer service, and CRM software — plus the methodology, resources, and support — to help businesses grow better."
+      },
+      "zendesk": {
+        "title": "Zendesk",
+        "description": "Zendesk is a service-first CRM company that builds software designed to improve customer relationships. As employees, we encourage each other to grow and innovate."
+      },
+      "intercom": {
+        "title": "Intercom",
+        "description": "Intercom is a Conversational Relationship Platform (CRP). With Intercom, you can build better customer relationships through personalized, messenger-based experiences across the customer journey."
+      },
+      "mailchimp": {
+        "title": "Mailchimp",
+        "description": "Mailchimp is an all-in-one Marketing Platform for small business. We empower millions of customers around the world to start and grow their businesses with our smart marketing technology, award-winning support, and inspiring content."
+      },
+      "zapier": {
+        "title": "Zapier",
+        "description": "Zapier moves info between your web apps automatically, so you can focus on your most important work. It integrates with over 2,000 apps."
+      },
+      "segment": {
+        "title": "Segment",
+        "description": "Segment is a customer data platform that makes good data accessible for all teams. It helps teams harness the power of their data, so they can build better products and grow faster."
+      },
+      "shopify": {
+        "title": "Shopify",
+        "description": "Shopify is a commerce platform that allows anyone to set up an online store and sell their products. Merchants can also sell their products in person with Shopify POS."
+      },
+      "wordpress": {
+        "title": "WordPress",
+        "description": "WordPress is open source software you can use to create a beautiful website, blog, or app."
+      },
+      "googleSheets": {
+        "title": "Google Sheets",
+        "description": "Google Sheets is a web-based spreadsheet offered by Google as part of their Google Drive service. It makes it easy to create, edit and collaborate with others from your phone, tablet or computer."
+      }
+    }
+  },
+  "industries": {},
+  "contacts": {
+    "title": "Contact Us",
+    "description": "Get in touch with us for any queries or support.",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "submit": "Submit"
+    }
+  },
+  "about": {
+    "title": "About Us",
+    "description": "We are a team of developers who are passionate about building software that makes a difference. We believe in the power of technology to change the world and we are committed to building software that helps people."
+  }
+}

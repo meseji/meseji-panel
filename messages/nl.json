@@ -1,0 +1,112 @@
+{
+  "auth": {
+    "login": {
+      "title": "Welkom op de inlogpagina",
+      "description": "Meld je aan om door te gaan"
+    },
+    "register": {
+      "title": "Welkom op de registratiepagina",
+      "description": "Maak een account aan om door te gaan"
+    }
+  },
+  "cta": {
+    "title": "Klaar om uw zakelijke communicatie te verhogen?",
+    "description": "Ontdek hoe meseji uw klantbetrokkenheid kan transformeren.",
+    "button": "Boek een demo"
+  },
+  "home": {
+    "hero": {
+      "title": "Verbind, betrokken en groeit met WhatsApp",
+      "subtitle": "Een naadloze manier om contact te maken met klanten met behulp van multi-channel marketingoplossingen.",
+      "buttons": {
+        "free_trial": "Gratis proefversie",
+        "book_demo": "Boek een demo"
+      },
+      "links": {
+        "free_trial": "/register?ref=marketing-free",
+        "book_demo": "https://cal.com/meseji/30min"
+      }
+    },
+    "features": {
+      "tag": "Functies",
+      "title": "Wat we bieden"
+    },
+    "howDo": {
+      "tag": "Producten",
+      "title": "Voordelen",
+      "description": "Ervaar de kracht van meseji - waar innovatie eenvoud is.",
+      "items": {
+        "broadcast": {
+          "title": "Uitzending",
+          "description": "Verhoog de betrokkenheid, conversies en klantloyaliteit met op maat gemaakte communicatie."
+        },
+        "automation": {
+          "title": "Automatisering",
+          "description": "Maak aangepaste workflows op maat van uw zakelijke chatbehoeften voor naadloze activiteiten."
+        },
+        "tracking": {
+          "title": "Het volgen",
+          "description": "Bewaak klantgedrag, campagneprestaties, chat en verkoopstatistieken in realtime."
+        },
+        "crm": {
+          "title": "CRM",
+          "description": "Klantinteracties, voorkeuren en aankoopgeschiedenis om gepersonaliseerde ervaringen te leveren."
+        }
+      }
+    },
+    "blog": {
+      "title": "Word slim, bespaar tijd",
+      "description": "Krijg de nieuwste artikelen over groei, marketing, uitzending, interactie en productiviteit rechtstreeks in uw inbox. \nKrijg ook kennis over WhatsApp Business API, Chatbot en meer.",
+      "form": {
+        "cta": "Doe nu mee",
+        "info": "Doe mee om elke week gratis updates te krijgen"
+      },
+      "articles": [
+        {
+          "title": "10 bewezen strategieën voor bulk whatsapp -berichten",
+          "description": "Bulk WhatsApp Messaging is een ongelooflijk effectief hulpmiddel om uw klanten rechtstreeks te bereiken en de verkoop te stimuleren.",
+          "category": "Marketing",
+          "readTime": "5 minuten gelezen",
+          "link": "/blog/10-proven-strategies-for-bulk-whatsapp-messaging-that-drive-sales",
+          "image": "https://cdn.hashnode.com/res/hashnode/image/upload/v1733162680291/fea3153c-c305-48a0-9804-6aadfb2becab.png?w=1600&h=840&fit=crop&crop=entropy&auto=compress,format&format=webp"
+        },
+        {
+          "readTime": "4 min gelezen",
+          "category": "Uitzending",
+          "title": "Top 5 use cases voor bulk whatsapp -berichten",
+          "description": "WhatsApp is een krachtig hulpmiddel voor bedrijven om contact te maken met klanten.",
+          "link": "blog/top-5-use-cases-for-bulk-whatsapp-messaging-in-marketing-and-customer-service",
+          "image": "https://cdn.hashnode.com/res/hashnode/image/upload/v1733162562242/cd070609-61b8-487a-a852-65608caa32a9.png?w=1600&h=840&fit=crop&crop=entropy&auto=compress,format&format=webp"
+        },
+        {
+          "description": "Bedrijven zijn voortdurend op zoek naar innovatieve en efficiënte manieren om hun klanten te bereiken en in contact te komen.",
+          "title": "Do's en Don't's van het gebruik van WhatsApp API voor zaken",
+          "category": "Productiviteit",
+          "readTime": "4 min gelezen",
+          "link": "/blog/the-dos-and-donts-of-using-whatsapp-api-for-business",
+          "image": "https://cdn.hashnode.com/res/hashnode/image/upload/v1733162657849/d4423407-7c75-46be-87fa-25ef19911a5c.png?w=1600&h=840&fit=crop&crop=entropy&auto=compress,format&format=webp"
+        }
+      ]
+    },
+    "solutions": {
+      "title": "Uitgebreide WhatsApp -oplossingen",
+      "description": "Ervaar naadloze WhatsApp-berichten met onze hoogwaardige, kosteneffectieve service.",
+      "revolutionary_project": {
+        "title": "Revolutionair project",
+        "description": "Plan en structuur werken hoe u wilt. \nSnel taken organiseren."
+      },
+      "app_integrations": {
+        "description": "Breng al uw tools en gegevens samen. \nDoe ook mee met honderden andere apps.",
+        "title": "App -integraties"
+      },
+      "data_reporting": {
+        "description": "Krijg realtime inzicht in vooruitgang en stelt teams in staat om hun werkgewoonten te volgen.",
+        "title": "Gegevensrapportage"
+      },
+      "workflow_builder": {
+        "title": "Workflowbuilder",
+        "description": "Geautomatiseerde processen om uw teams te coördineren en de communicatie te vergroten."
+      }
+    }
+  }
+}
