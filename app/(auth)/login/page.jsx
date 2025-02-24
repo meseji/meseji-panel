@@ -11,7 +11,7 @@ import Image from "next/image";
 import Auth from "@/components/auth/auth";
 import Link from "next/link";
 
-export default function Login() {
+export default function Page() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const dispatch = useDispatch();
