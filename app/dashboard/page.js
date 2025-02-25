@@ -7,7 +7,7 @@ import { TemplateAnalytics } from "@/components/dashboard/maindash/TempAna";
 import Button from "@/components/ui/Button";
 import React from "react";
 
-export default function Home() {
+export default function Page() {
   return (
     <main className="flex py-2 h-auto gap-2 flex-col-reverse lg:flex-row">
       <div className="h-auto w-full lg:w-9/12 space-y-4">
