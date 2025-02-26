@@ -37,24 +37,6 @@ export default async function sitemap() {
       priority: 0.8,
     },
     {
-      url: "https://meseji.app/privacy-policy",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: "https://meseji.app/terms-conditions",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: "https://meseji.app/refund-policy",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
       url: "https://meseji.app/login",
       lastModified: new Date(),
       changeFrequency: "monthly",
