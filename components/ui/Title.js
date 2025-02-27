@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import PropTypes from "prop-types"; // Optional for prop type validation
-import { cn } from "@/lib/utils/cn";
+import { cn } from "@/lib/utils/utils";
 
 export default function Title({
   children,

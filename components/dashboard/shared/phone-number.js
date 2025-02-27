@@ -1,6 +1,6 @@
 "use client";
 
-import { cn } from "@/lib/utils/cn";
+import { cn } from "@/lib/utils/utils";
 import { ChevronDown, Phone } from "lucide-react";
 import React, { forwardRef, useId } from "react";
 import * as RPNInput from "react-phone-number-input";

@@ -3,7 +3,7 @@ import { Icon } from "@/components/Icon";
 import { NavUser } from "@/components/NavUser";
 import Breadcrumb from "@/components/ui/Breadcrumbs";
 import { sidebarNav } from "@/config/site-nav";
-import { cn } from "@/lib/utils/cn";
+import { cn } from "@/lib/utils/utils";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
