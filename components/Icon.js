@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils/cn";
+import { cn } from "@/lib/utils/utils";
 import {
   ArrowUpRight,
   Bell,
@@ -1008,7 +1008,7 @@ const Youtube = ({ className }) => (
   </svg>
 );
 
- const MessageIcon = ({ className }) => (
+const MessageIcon = ({ className }) => (
   <svg
     className={`w-6 h-6 ${className}`}
     viewBox="0 0 24 24"
@@ -1025,7 +1025,7 @@ const Youtube = ({ className }) => (
   </svg>
 );
 
- const UserInputIcon = ({ className }) => (
+const UserInputIcon = ({ className }) => (
   <svg
     className={`w-6 h-6 ${className}`}
     viewBox="0 0 24 24"
@@ -1042,31 +1042,57 @@ const Youtube = ({ className }) => (
   </svg>
 );
 
- const ListIcon = ({ className }) => (
+const ListIcon = ({ className }) => (
   <svg
     className={`w-6 h-6 ${className}`}
     viewBox="0 0 24 24"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <rect width="18" height="18" x="3" y="3" rx="2" stroke="currentColor" strokeWidth="2" />
-    <path d="M8 12h8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+    <rect
+      width="18"
+      height="18"
+      x="3"
+      y="3"
+      rx="2"
+      stroke="currentColor"
+      strokeWidth="2"
+    />
+    <path
+      d="M8 12h8"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+    />
   </svg>
 );
 
- const ProductIcon = ({ className }) => (
+const ProductIcon = ({ className }) => (
   <svg
     className={`w-6 h-6 ${className}`}
     viewBox="0 0 24 24"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <rect width="18" height="18" x="3" y="3" rx="2" stroke="currentColor" strokeWidth="2" />
-    <path d="M6 12h12m-6 6V6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+    <rect
+      width="18"
+      height="18"
+      x="3"
+      y="3"
+      rx="2"
+      stroke="currentColor"
+      strokeWidth="2"
+    />
+    <path
+      d="M6 12h12m-6 6V6"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+    />
   </svg>
 );
 
- const TagIcon = ({ className }) => (
+const TagIcon = ({ className }) => (
   <svg
     className={`w-6 h-6 ${className}`}
     viewBox="0 0 24 24"
@@ -1083,7 +1109,7 @@ const Youtube = ({ className }) => (
   </svg>
 );
 
- const QuestionIcon = ({ className }) => (
+const QuestionIcon = ({ className }) => (
   <svg
     className={`w-6 h-6 ${className}`}
     viewBox="0 0 24 24"
@@ -1099,7 +1125,6 @@ const Youtube = ({ className }) => (
     />
   </svg>
 );
-
 
 export const Icon = {
   user: User,
@@ -1176,11 +1201,11 @@ export const Icon = {
   linkedin: LinkedIn,
 
   // flows
-  QuestionIcon:QuestionIcon,
-  TagIcon:TagIcon,
-  ProductIcon:ProductIcon,
-  ListIcon:ListIcon,
-  UserInputIcon:UserInputIcon,
+  QuestionIcon: QuestionIcon,
+  TagIcon: TagIcon,
+  ProductIcon: ProductIcon,
+  ListIcon: ListIcon,
+  UserInputIcon: UserInputIcon,
 
   facebook: Facebook,
 };

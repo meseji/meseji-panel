@@ -1,5 +1,5 @@
 import StatusBadge from "@/components/shared/badge/status-badge";
-import { cn } from "@/lib/utils/cn";
+import { cn } from "@/lib/utils/utils";
 import { truncateText } from "@/lib/utils/utils";
 
 export default function TemplateTable({ templates, className }) {

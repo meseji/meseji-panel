@@ -6,7 +6,7 @@ import { Icon } from "@/components/Icon";
 import Button from "@/components/ui/Button";
 import Title from "@/components/ui/Title";
 import { useGetAllTemplateQuery } from "@/lib/features/api/whatsappTemplateApiSlice";
-import { cn } from "@/lib/utils/cn";
+import { cn } from "@/lib/utils/utils";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 

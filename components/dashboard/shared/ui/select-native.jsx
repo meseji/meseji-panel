@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils/cn";
+import { cn } from "@/lib/utils/utils";
 import { ChevronDown } from "lucide-react";
 import React from "react";
 
@@ -12,7 +12,7 @@ const SelectNative = React.forwardRef(
             props.multiple
               ? "py-1 [&>*]:px-3 [&>*]:py-1 [&_option:checked]:bg-accent"
               : "h-9 pe-8 ps-3",
-            className,
+            className
           )}
           ref={ref}
           {...props}
