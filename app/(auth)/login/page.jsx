@@ -41,8 +41,8 @@ export default function Page() {
 
   return (
     <Auth>
-      <div className="relative p-4 mx-auto w-full max-w-sm">
-        <div className="flex justify-center items-center ">
+      <div className="relative p-4 mx-auto w-full max-w-full md:max-w-sm lg:max-w-md">
+        {/* <div className="flex justify-center items-center ">
           <Image
             className="w-auto h-14 lg:h-16"
             width={56}
@@ -51,69 +51,75 @@ export default function Page() {
             alt="meseji"
             quality={100}
           />
-        </div>
-        <div className="mx-auto w-full">
-        <h2 className="mb-6 text-start text-4xl font-semibold leading-9 tracking-tight text-gray-900">
+        </div> */}
+        <div className="mx-auto w-full mb-8 space-y-2">
+          <h2 className="text-start text-4xl font-semibold leading-9 tracking-tight text-gray-900">
             Login
           </h2>
+          <p className="text-xl text-start text-gray-600">
+            Log in to your account to continue
+          </p>
         </div>{" "}
         <div className="my-4 mx-auto">
-          <form className="space-y-3" onSubmit={handleSubmit}>
-            <div>
-              <label
-                htmlFor="email"
-                className="block text-sm font-medium leading-6 text-gray-900"
-              >
-                Email address
-              </label>
-              <div className="mt-2">
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  autoComplete="email"
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                  className="block w-full rounded-md border-0 py-1.5 px-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                />
-              </div>
-            </div>
-            <div>
-              <div className="flex items-center justify-between">
+          <form onSubmit={handleSubmit}>
+            <div className="space-y-3">
+              <div>
                 <label
-                  htmlFor="password"
+                  htmlFor="email"
                   className="block text-sm font-medium leading-6 text-gray-900"
                 >
-                  Password
+                  Email address
                 </label>
-                <div className="text-sm">
-                  <Link
-                    aria-label={"forget password"}
-                    href="/#"
-                    className="font-semibold text-indigo-600 hover:text-indigo-500"
-                  >
-                    Forgot password?
-                  </Link>
+                <div className="mt-2">
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    autoComplete="email"
+                    placeholder="hello@example.com"
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                    className="block w-full rounded-md border-0 p-2 ps-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  />
                 </div>
               </div>
-              <div className="mt-2">
-                <input
-                  id="password"
-                  name="password"
-                  type="password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  autoComplete="current-password"
-                  required
-                  className="block w-full rounded-md border-0 py-1.5 px-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                />
+              <div>
+                <div className="flex items-center justify-between">
+                  <label
+                    htmlFor="password"
+                    className="block text-sm font-medium leading-6 text-gray-900"
+                  >
+                    Password
+                  </label>
+                  <div className="text-sm">
+                    <Link
+                      aria-label={"forget password"}
+                      href="/#"
+                      className="font-semibold text-indigo-600 hover:text-indigo-500"
+                    >
+                      Forgot password?
+                    </Link>
+                  </div>
+                </div>
+                <div className="mt-2">
+                  <input
+                    id="password"
+                    name="password"
+                    type="password"
+                    value={password}
+                    placeholder="Password"
+                    onChange={(e) => setPassword(e.target.value)}
+                    autoComplete="current-password"
+                    required
+                    className="block w-full rounded-md border-0 p-2 ps-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  />
+                </div>
               </div>
             </div>
-
-            <div>
+            <div className="flex justify-between mt-8">
               <button
                 type="submit"
-                className="flex w-full justify-center rounded-md bg-black px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-gray-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600"
+                className="flex w-full justify-center rounded-md bg-black px-3 py-2 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-gray-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600"
               >
                 {isLoading ? (
                   <div className="size-6 animate-spin rounded-full border-4 border-gray-200 border-t-black" />

@@ -245,147 +245,153 @@ export default function Page() {
   };
 
   const onBack = () => {
-    setStep(1); // Move back to the previous step
+    setStep(1);
   };
 
   return (
     <Auth>
-      <div className="relative p-4 mx-auto w-full max-w-sm">
-        <div className="mx-auto w-full">
-          <h2 className="mb-6 text-start text-4xl font-semibold leading-9 tracking-tight text-gray-900">
+      <div className="relative p-4 mx-auto w-full max-w-full md:max-w-sm lg:max-w-md">
+      <div className="mx-auto w-full mb-8 space-y-2">
+      <h2 className="text-start text-4xl font-semibold leading-9 tracking-tight text-gray-900">
             Sign Up
           </h2>
-        </div>{" "}
-        <div className="mx-auto sm:w-full">
-          <form className="space-y-4" onSubmit={handleSubmit(onSubmit)}>
-            {step === 1 && (
-              <>
-                <div>
-                  <label
-                    htmlFor="email"
-                    className="block text-sm font-medium leading-6 text-gray-900"
-                  >
-                    Email address
-                  </label>
-                  <div className="mt-2">
-                    <Controller
-                      name="email"
-                      control={control}
-                      render={({ field }) => (
-                        <input
-                          {...field}
-                          type="email"
-                          placeholder="hello@example.com"
-                          autoComplete="email"
-                          className="block w-full rounded-lg border-0 py-1.5 px-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                        />
-                      )}
-                    />
-                    {errors.email && (
-                      <p className="text-red-500 text-sm mt-1">
-                        {errors.email.message}
-                      </p>
-                    )}
-                  </div>
-                </div>
+          <p className="text-xl text-start text-gray-600">
+            Sign up to your account to continue
+          </p>
+        </div>
 
-                <div>
-                  <div className="flex items-center justify-between">
+        <div className="mx-auto w-full">
+          <form className="" onSubmit={handleSubmit(onSubmit)}>
+            <div className="space-y-3">
+              {step === 1 && (
+                <>
+                  <div>
                     <label
-                      htmlFor="password"
+                      htmlFor="email"
                       className="block text-sm font-medium leading-6 text-gray-900"
                     >
-                      Password
+                      Email address
                     </label>
-                  </div>
-                  <div className="mt-2">
-                    <Controller
-                      name="password"
-                      control={control}
-                      render={({ field }) => (
-                        <input
-                          {...field}
-                          type="password"
-                          placeholder="Password"
-                          className="block w-full rounded-md border-0 py-1.5 px-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                        />
+                    <div className="mt-2">
+                      <Controller
+                        name="email"
+                        control={control}
+                        render={({ field }) => (
+                          <input
+                            {...field}
+                            type="email"
+                            placeholder="hello@example.com"
+                            autoComplete="email"
+                            className="block w-full rounded-lg border-0 p-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                          />
+                        )}
+                      />
+                      {errors.email && (
+                        <p className="text-red-500 text-sm mt-1">
+                          {errors.email.message}
+                        </p>
                       )}
-                    />
-                    {errors.password && (
-                      <p className="text-red-500 text-sm mt-1">
-                        {errors.password.message}
-                      </p>
-                    )}
+                    </div>
                   </div>
-                </div>
-              </>
-            )}
 
-            {step === 2 && (
-              <>
-                <div>
-                  <div className="flex items-center justify-between">
-                    <label
-                      htmlFor="name"
-                      className="block text-sm font-medium leading-6 text-gray-900"
-                    >
-                      Full Name
-                    </label>
-                  </div>
-                  <div className="mt-2">
-                    <Controller
-                      name="name"
-                      control={control}
-                      render={({ field }) => (
-                        <input
-                          {...field}
-                          type="text"
-                          placeholder="John Doe"
-                          className="block w-full rounded-md border-0 py-1.5 px-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2   sm:text-sm sm:leading-6"
-                        />
+                  <div>
+                    <div className="flex items-center justify-between">
+                      <label
+                        htmlFor="password"
+                        className="block text-sm font-medium leading-6 text-gray-900"
+                      >
+                        Password
+                      </label>
+                    </div>
+                    <div className="mt-2">
+                      <Controller
+                        name="password"
+                        control={control}
+                        render={({ field }) => (
+                          <input
+                            {...field}
+                            type="password"
+                            placeholder="Password"
+                            className="block w-full rounded-md border-0 py-1.5 px-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                          />
+                        )}
+                      />
+                      {errors.password && (
+                        <p className="text-red-500 text-sm mt-1">
+                          {errors.password.message}
+                        </p>
                       )}
-                    />
-                    {errors.name && (
-                      <p className="text-red-500 text-sm mt-1">
-                        {errors.name.message}
-                      </p>
-                    )}
+                    </div>
                   </div>
-                </div>
+                </>
+              )}
 
-                <div>
-                  <div className="flex items-center justify-between">
-                    <label
-                      htmlFor="phone_number"
-                      className="block text-sm font-medium leading-6 text-gray-900"
-                    >
-                      Number
-                    </label>
-                  </div>
-                  <div className="mt-2">
-                    <Controller
-                      name="phone_number"
-                      control={control}
-                      render={({ field }) => (
-                        <PhoneNumberInput
-                          value={field.value}
-                          onChange={field.onChange}
-                          placeholder="Enter phone number"
-                          // label="Phone Number"
-                        />
+              {step === 2 && (
+                <>
+                  <div>
+                    <div className="flex items-center justify-between">
+                      <label
+                        htmlFor="name"
+                        className="block text-sm font-medium leading-6 text-gray-900"
+                      >
+                        Full Name
+                      </label>
+                    </div>
+                    <div className="mt-2">
+                      <Controller
+                        name="name"
+                        control={control}
+                        render={({ field }) => (
+                          <input
+                            {...field}
+                            type="text"
+                            placeholder="John Doe"
+                            className="block w-full rounded-md border-0 p-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2   sm:text-sm sm:leading-6"
+                          />
+                        )}
+                      />
+                      {errors.name && (
+                        <p className="text-red-500 text-sm mt-1">
+                          {errors.name.message}
+                        </p>
                       )}
-                    />
-                    {errors.phone_number && (
-                      <p className="text-red-500 text-sm mt-1">
-                        {errors.phone_number.message}
-                      </p>
-                    )}
+                    </div>
                   </div>
-                </div>
-              </>
-            )}
 
-            <div className="flex justify-between mt-12">
+                  <div>
+                    <div className="flex items-center justify-between">
+                      <label
+                        htmlFor="phone_number"
+                        className="block text-sm font-medium leading-6 text-gray-900"
+                      >
+                        Number
+                      </label>
+                    </div>
+                    <div className="mt-2">
+                      <Controller
+                        name="phone_number"
+                        control={control}
+                        render={({ field }) => (
+                          <PhoneNumberInput
+                            value={field.value}
+                            onChange={field.onChange}
+                            placeholder="Enter phone number"
+                            // label="Phone Number"
+                          />
+                        )}
+                      />
+                      {errors.phone_number && (
+                        <p className="text-red-500 text-sm mt-1">
+                          {errors.phone_number.message}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                </>
+              )}
+            </div>
+
+            <div className="flex justify-between mt-8">
               {step > 1 && (
                 <button
                   type="button"
@@ -409,18 +415,19 @@ export default function Page() {
             </div>
           </form>
 
-         { step === 1 && (
-          <div className="mt-6">
-            <p className="flex mx-auto text-sm font-medium leading-tight text-center text-black">
-              Already member?
-              <Link
-                className="font-semibold text-indigo-600 hover:text-indigo-500 ml-1"
-                href="/login"
-              >
-                Login
-              </Link>
-            </p>
-          </div>)}
+          {step === 1 && (
+            <div className="mt-6">
+              <p className="flex mx-auto text-sm font-medium leading-tight text-center text-black">
+                Already member?
+                <Link
+                  className="font-semibold text-indigo-600 hover:text-indigo-500 ml-1"
+                  href="/login"
+                >
+                  Login
+                </Link>
+              </p>
+            </div>
+          )}
         </div>
       </div>
     </Auth>
