@@ -20,18 +20,6 @@ export default function Page() {
   };
   return (
     <div className="flex flex-col h-full w-full space-y-2">
-      {/* <div className="flex flex-col md:flex-row lg:flex-row  justify-between ">
-        <Title>Broadcast</Title>
-        <div className="flex items-center gap-3">
-          <Button
-            size="md"
-            onClick={() => router.push("broadcast/new-broadcast")}
-          >
-            <Icon.plus size={18} className="mr-1" />
-            New Broadcast
-          </Button>
-        </div>
-      </div> */}
       <MainHeader title="Broadcast">
         <Button
           size="md"

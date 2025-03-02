@@ -12,7 +12,7 @@ import {
 } from "./dashboard/shared/ui/popover";
 import { cn } from "@/lib/utils/utils";
 
-export function NavUser({ label, className }) {
+export function NavUser({ label }) {
   const { user } = useSelector((state) => state.auth);
   const router = useRouter();
   const dispatch = useDispatch();
