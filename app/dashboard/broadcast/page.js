@@ -1,11 +1,10 @@
 "use client";
 import { Icon } from "@/components/Icon";
-import Title from "@/components/ui/Title";
 import React, { useState } from "react";
 import Button from "@/components/ui/Button";
-import CreateBroadcast from "@/components/dashboard/broadcast/create-broadcast";
 import { useRouter } from "next/navigation";
 import MainHeader from "@/components/dashboard/shared/MainHeader";
+import Broadcast from "@/components/dashboard/broadcast/broadcasts";
 
 export default function Page() {
   const router = useRouter();
@@ -30,7 +29,8 @@ export default function Page() {
         </Button>
       </MainHeader>
 
-      <CreateBroadcast />
+      <Broadcast />
+      
     </div>
   );
 }
