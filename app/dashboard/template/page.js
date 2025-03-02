@@ -150,7 +150,7 @@ export default function Page() {
                 "inline-block rounded-full p-2 me-4 text-gray-600 hover:bg-gray-50 focus:relative",
                 fetchingAllTemplates && "cursor-not-allowed opacity-60"
               )}
-              title="Sync All Template"
+              title="Sync Templates"
             >
               <Icon.sync
                 className={cn(
