@@ -73,7 +73,7 @@ export default function Template({ children }) {
           <div className="h-full flex flex-col justify-between">
             <div
               className={cn(
-                "flex  items-center px-3 py-2",
+                "flex items-center px-2 py-2",
                 isSidebarOpen ? "justify-between" : "justify-center"
               )}
             >
@@ -111,33 +111,33 @@ export default function Template({ children }) {
             <nav className="flex-1 overflow-y-auto p-3">
               <ul className="space-y-1">
                 {sidebarNav
-                  .filter((item) => item.isActive)
+                  .filter((item) => item?.isActive)
                   .map((item) => (
                     <li
-                      key={item.id}
+                      key={item?.id}
                       className={cn(
                         "flex items-center px-3 py-2 text-sm font-medium rounded-lg",
-                        pathname === item.route
+                        pathname === item?.route
                           ? "text-lime-950 bg-lime-200/80"
                           : "text-gray-500 hover:bg-lime-50",
                         isSidebarOpen ? "h-11 " : "size-11"
                       )}
                     >
-                      <Link href={item.route} className="flex items-center">
+                      <Link href={item?.route} className="flex items-center">
                         <item.icon className="size-[18px]" />
                         <span
                           className={`${
                             isSidebarOpen ? "block ml-2" : "hidden"
                           }`}
                         >
-                          {item.title}
+                          {item?.title}
                         </span>
                       </Link>
                     </li>
                   ))}
               </ul>
             </nav>
-            <div className="p-3 space-y-2 border-t border-gray-200 ">
+            <div className="p-3 space-y-2 ">
               <Link
                 href="/dashboard/settings"
                 className="flex items-center px-[10px] py-[10px] text-sm font-medium text-gray-900 rounded-lg hover:bg-lime-100/80"

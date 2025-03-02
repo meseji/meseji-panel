@@ -21,6 +21,7 @@ export default function Page() {
   const {
     data: getAllTemplates,
     isLoading: loadingAllTemplates,
+    isFetching: fetchingAllTemplates,
     refetch: refetchAllTemplates,
   } = useGetAllTemplateQuery();
 
@@ -39,7 +40,7 @@ export default function Page() {
           (template) => template.status === activeTab.toUpperCase()
         );
 
-        console.log(filteredTemplates)
+  console.log(filteredTemplates);
   return (
     <div className="flex flex-col h-[90vh] w-full">
       <MainHeader title="Templates">
@@ -143,14 +144,22 @@ export default function Page() {
           <div></div>
           <div className="flex flex-row items-center justify-between">
             <button
+              disabled={fetchingAllTemplates}
               onClick={() => refetchAllTemplates()}
               className={cn(
-                "inline-block rounded-full p-2 me-4 text-gray-600 hover:bg-gray-50 focus:relative"
+                "inline-block rounded-full p-2 me-4 text-gray-600 hover:bg-gray-50 focus:relative",
+                fetchingAllTemplates && "cursor-not-allowed opacity-60"
               )}
               title="Sync All Template"
             >
-              <Icon.sync className={"size-5"} />
+              <Icon.sync
+                className={cn(
+                  "size-5 transition-transform",
+                  fetchingAllTemplates && "animate-spin"
+                )}
+              />
             </button>
+
             <span className="inline-flex overflow-hidden rounded-md border bg-white shadow-xs">
               <button
                 onClick={() =>
