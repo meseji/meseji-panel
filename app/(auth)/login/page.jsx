@@ -53,8 +53,8 @@ export default function Page() {
           />
         </div>
         <div className="mx-auto w-full">
-          <h2 className="mt-2 text-center text-xl font-semibold leading-9 tracking-tight text-gray-900">
-            Login to Your Account
+        <h2 className="mb-6 text-start text-4xl font-semibold leading-9 tracking-tight text-gray-900">
+            Login
           </h2>
         </div>{" "}
         <div className="my-4 mx-auto">
