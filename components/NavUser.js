@@ -28,10 +28,10 @@ export function NavUser() {
         <PopoverTrigger asChild>
           <button className="w-22 h-10 bg-lime-50 px-3 py-2 inline-flex justify-center items-center text-md font-semibold rounded-full text-gray-800 hover:bg-lime-100">
             <Icon.user className="size-[20px] text-lime-800" />
-            <span className="hidden sm:block ml-2">
+            {/* <span className="hidden sm:block ml-2">
               {" "}
               {user?.name || "User"}
-            </span>
+            </span> */}
           </button>
         </PopoverTrigger>
         <PopoverContent

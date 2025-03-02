@@ -4,6 +4,7 @@ import { NavUser } from "@/components/NavUser";
 import Breadcrumb from "@/components/ui/Breadcrumbs";
 import { sidebarNav } from "@/config/site-nav";
 import { cn } from "@/lib/utils/utils";
+import { PanelRightClose, PanelRightOpen } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -12,6 +13,10 @@ import { useState } from "react";
 export default function Template({ children }) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const pathname = usePathname();
+
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
 
   const handleMouseEnter = () => {
     setIsSidebarOpen(true);
@@ -59,32 +64,51 @@ export default function Template({ children }) {
       <div className="flex flex-1 overflow-hidden">
         {/* Sidebar */}
         <aside
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-          // onMouseEnter={() => {
-          //   if (window.innerWidth >= 1024) handleMouseEnter(); // Only activate on larger screens (lg breakpoint)
-          // }}
-          // onMouseLeave={() => {
-          //   if (window.innerWidth >= 1024) handleMouseLeave(); // Only activate on larger screens (lg breakpoint)
-          // }}
+          // onMouseEnter={handleMouseEnter}
+          // onMouseLeave={handleMouseLeave}
           className={`${
             isSidebarOpen ? "w-56 " : "w-16 hidden lg:block"
           } bg-white h-full flex-shrink-0 transition-width duration-300 border-r `}
         >
           <div className="h-full flex flex-col justify-between">
-            <nav className="flex-1 overflow-y-auto p-3">
-              <div className="flex items-center">
-                <Link href="/dashboard">
-                  <Image
-                    className="w-auto h-10"
-                    width={60}
-                    height={46}
-                    src="/android-chrome-192x192.png"
-                    alt="logo"
-                    quality={100}
+            <div
+              className={cn(
+                "flex  items-center px-3 py-2",
+                isSidebarOpen ? "justify-between" : "justify-center"
+              )}
+            >
+              {isSidebarOpen && (
+                <div className="flex items-center">
+                  <Link href="/dashboard">
+                    <Image
+                      className="w-auto h-10"
+                      width={60}
+                      height={46}
+                      src="/android-chrome-192x192.png"
+                      alt="logo"
+                      quality={100}
+                    />
+                  </Link>
+                </div>
+              )}
+              <button
+                className="group inline-flex rounded-md p-2 hover:bg-gray-200/50"
+                onClick={toggleSidebar}
+              >
+                {isSidebarOpen ? (
+                  <PanelRightClose
+                    className="size-5 shrink-0 text-gray-500 group-hover:text-gray-700 "
+                    aria-hidden="true"
                   />
-                </Link>
-              </div>
+                ) : (
+                  <PanelRightOpen
+                    className="size-5 shrink-0 text-gray-500 group-hover:text-gray-700 "
+                    aria-hidden="true"
+                  />
+                )}
+              </button>
+            </div>
+            <nav className="flex-1 overflow-y-auto p-3">
               <ul className="space-y-1">
                 {sidebarNav
                   .filter((item) => item.isActive)
@@ -123,9 +147,6 @@ export default function Template({ children }) {
                   Settings
                 </span>
               </Link>
-              <div className="h-10 text-gray-800 rounded-full flex justify-center items-center">
-                <NavUser />
-              </div>
             </div>
           </div>
         </aside>
