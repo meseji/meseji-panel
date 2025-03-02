@@ -12,7 +12,7 @@ import React from "react";
 export default function Page() {
   return (
     <main className="flex flex-col py-2 h-auto gap-2">
-      <div className="flex justify-between items-center h-14 w-full">
+      <div className="flex justify-between items-center h-14 mx-4">
         <h2 className="text-2xl font-semibold text-gray-800  ">
           Welcome back, User
         </h2>

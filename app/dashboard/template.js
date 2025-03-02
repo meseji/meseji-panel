@@ -116,7 +116,7 @@ export default function Template({ children }) {
                     <li
                       key={item.id}
                       className={cn(
-                        "flex items-center px-3 py-2 text-sm font-medium rounded-md ",
+                        "flex items-center px-3 py-2 text-sm font-medium rounded-lg",
                         pathname === item.route
                           ? "text-lime-950 bg-lime-200/80"
                           : "text-gray-500 hover:bg-lime-50",
@@ -137,16 +137,17 @@ export default function Template({ children }) {
                   ))}
               </ul>
             </nav>
-            <div className="p-3">
+            <div className="p-3 space-y-2 border-t border-gray-200 ">
               <Link
                 href="/dashboard/settings"
-                className="flex items-center px-[10px] py-[10px] text-base text-gray-900 bg-lime-100 rounded-lg"
+                className="flex items-center px-[10px] py-[10px] text-sm font-medium text-gray-900 rounded-lg hover:bg-lime-100/80"
               >
                 <Icon.settings className="size-[18px]" />
                 <span className={cn(isSidebarOpen ? "block ml-3" : "hidden")}>
                   Settings
                 </span>
               </Link>
+              <NavUser label={isSidebarOpen && "Account"} />
             </div>
           </div>
         </aside>
