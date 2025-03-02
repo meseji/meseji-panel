@@ -24,7 +24,7 @@ export default function Template({ children }) {
   return (
     <div className="h-screen flex flex-col">
       {/* Navbar */}
-      <nav className="h-16 w-full flex-shrink-0 flex items-center justify-between px-4 bg-white border-b">
+      {/* <nav className="h-16 w-full flex-shrink-0 flex items-center justify-between px-4 bg-white border-b">
         <div className="flex flex-row justify-center items-center">
           <Icon.sidebar
             onClick={() => setIsSidebarOpen(!isSidebarOpen)}
@@ -53,7 +53,7 @@ export default function Template({ children }) {
             <NavUser />
           </div>
         </div>
-      </nav>
+      </nav> */}
 
       {/* Sidebar and Main Content */}
       <div className="flex flex-1 overflow-hidden">
@@ -73,6 +73,18 @@ export default function Template({ children }) {
         >
           <div className="h-full flex flex-col justify-between">
             <nav className="flex-1 overflow-y-auto p-3">
+              <div className="flex items-center">
+                <Link href="/dashboard">
+                  <Image
+                    className="w-auto h-10"
+                    width={60}
+                    height={46}
+                    src="/android-chrome-192x192.png"
+                    alt="logo"
+                    quality={100}
+                  />
+                </Link>
+              </div>
               <ul className="space-y-1">
                 {sidebarNav
                   .filter((item) => item.isActive)
@@ -88,7 +100,7 @@ export default function Template({ children }) {
                       )}
                     >
                       <Link href={item.route} className="flex items-center">
-                        <item.icon className="size-5" />
+                        <item.icon className="size-[18px]" />
                         <span
                           className={`${
                             isSidebarOpen ? "block ml-2" : "hidden"
@@ -106,11 +118,14 @@ export default function Template({ children }) {
                 href="/dashboard/settings"
                 className="flex items-center px-[10px] py-[10px] text-base text-gray-900 bg-lime-100 rounded-lg"
               >
-                <Icon.settings className="size-5" />
+                <Icon.settings className="size-[18px]" />
                 <span className={cn(isSidebarOpen ? "block ml-3" : "hidden")}>
                   Settings
                 </span>
               </Link>
+              <div className="h-10 text-gray-800 rounded-full flex justify-center items-center">
+                <NavUser />
+              </div>
             </div>
           </div>
         </aside>

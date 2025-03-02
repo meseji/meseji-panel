@@ -4,8 +4,9 @@ import { usePathname } from "next/navigation";
 export default function Auth({ children }) {
   const path = usePathname();
   return (
-    <section className="grid gap-0 h-svh md:grid-cols-2 bg-white">
-      <div className="hidden md:flex items-center justify-center bg-black rounded-xl ml-4 my-4">
+    <section className="flex flex-row h-svh bg-white">
+      {/* banner part */}
+      <div className="hidden md:flex items-center justify-center bg-black rounded-xl ml-4 my-4 w-full lg:w-5/12">
         <div className="mx-auto max-w-md px-5 py-16 md:px-10 md:py-20">
           <div className="flex justify-center">
             <img
@@ -30,14 +31,14 @@ export default function Auth({ children }) {
                 Welcome!
               </h2>
               <p className="mt-2 text-sm text-center text-gray-300">
-              Onboard with Meseji
+                Onboard with Meseji
               </p>
             </>
           )}
         </div>
       </div>
 
-      <div className="flex flex-col justify-between px-5 py-4 md:px-8 min-h-screen">
+      <div className="flex flex-col justify-between px-5 py-4 md:px-8 min-h-screen w-full lg:w-7/12">
         <div className="flex-grow flex items-center justify-center h-[70vh]">
           {children}
         </div>

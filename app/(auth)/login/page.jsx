@@ -10,6 +10,7 @@ import Facebook from "@/lib/facebook";
 import Image from "next/image";
 import Auth from "@/components/auth/auth";
 import Link from "next/link";
+import { Button } from "@/components/dashboard/shared/ui/button";
 
 export default function Page() {
   const [email, setEmail] = useState("");
@@ -60,9 +61,9 @@ export default function Page() {
             Log in to your account to continue
           </p>
         </div>{" "}
-        <div className="my-4 mx-auto">
+        <div className="my-4 mx-auto  space-y-3">
           <form onSubmit={handleSubmit}>
-            <div className="space-y-3">
+            <div className="space-y-2">
               <div>
                 <label
                   htmlFor="email"
@@ -116,6 +117,20 @@ export default function Page() {
                 </div>
               </div>
             </div>
+            <div className="flex justify-between gap-2">
+              {/* <div className="flex items-center gap-2">
+              <Checkbox id={`${id}-remember`} />
+              <Label
+                htmlFor={`${id}-remember`}
+                className="text-muted-foreground font-normal"
+              >
+                Remember me
+              </Label>
+            </div>
+            <a className="text-sm underline hover:no-underline" href="#">
+              Forgot password?
+            </a> */}
+            </div>
             <div className="flex justify-between mt-8">
               <button
                 type="submit"
@@ -129,12 +144,21 @@ export default function Page() {
               </button>
             </div>
           </form>
-          <div className="mt-6">
-            <p className="flex mx-auto text-sm font-medium leading-tight text-center text-black">
+
+          <div className="before:bg-border after:bg-border flex items-center gap-3 before:h-px before:flex-1 after:h-px after:flex-1">
+            <span className="text-muted-foreground text-xs">Or</span>
+          </div>
+
+          <Button variant="outline" disabled className="w-full">
+            Login with Google
+          </Button>
+
+          <div>
+            <p className="text-sm font-medium leading-tight text-center mt-4 text-gray-600">
               Not a member?
               <Link
                 aria-label={"Sign up now"}
-                className="font-semibold text-indigo-600 hover:text-indigo-500 ml-1"
+                className="font-semibold text-indigo-400 hover:text-indigo-500 ml-1"
                 href="/register"
               >
                 Sign up now

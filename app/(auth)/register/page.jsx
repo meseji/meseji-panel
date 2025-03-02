@@ -207,6 +207,7 @@ import { useForm, Controller } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { step1Schema, step2Schema } from "@/lib/utils/schemas";
 import { cn } from "@/lib/utils/utils";
+import { Button } from "@/components/dashboard/shared/ui/button";
 
 export default function Page() {
   const [step, setStep] = useState(1);
@@ -251,8 +252,8 @@ export default function Page() {
   return (
     <Auth>
       <div className="relative p-4 mx-auto w-full max-w-full md:max-w-sm lg:max-w-md">
-      <div className="mx-auto w-full mb-8 space-y-2">
-      <h2 className="text-start text-4xl font-semibold leading-9 tracking-tight text-gray-900">
+        <div className="mx-auto w-full mb-8 space-y-2">
+          <h2 className="text-start text-4xl font-semibold leading-9 tracking-tight text-gray-900">
             Sign Up
           </h2>
           <p className="text-xl text-start text-gray-600">
@@ -260,9 +261,9 @@ export default function Page() {
           </p>
         </div>
 
-        <div className="mx-auto w-full">
-          <form className="" onSubmit={handleSubmit(onSubmit)}>
-            <div className="space-y-3">
+        <div className="mx-auto w-full space-y-3">
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <div className="space-y-2">
               {step === 1 && (
                 <>
                   <div>
@@ -282,7 +283,7 @@ export default function Page() {
                             type="email"
                             placeholder="hello@example.com"
                             autoComplete="email"
-                            className="block w-full rounded-lg border-0 p-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                            className="block w-full rounded-lg border-0 p-2 ps-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 sm:text-sm sm:leading-6"
                           />
                         )}
                       />
@@ -312,7 +313,7 @@ export default function Page() {
                             {...field}
                             type="password"
                             placeholder="Password"
-                            className="block w-full rounded-md border-0 py-1.5 px-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                            className="block w-full rounded-md border-0 p-2 ps-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 sm:text-sm sm:leading-6"
                           />
                         )}
                       />
@@ -346,12 +347,12 @@ export default function Page() {
                             {...field}
                             type="text"
                             placeholder="John Doe"
-                            className="block w-full rounded-md border-0 p-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2   sm:text-sm sm:leading-6"
+                            className="block w-full rounded-md border-0 p-2 ps-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 sm:text-sm sm:leading-6"
                           />
                         )}
                       />
                       {errors.name && (
-                        <p className="text-red-500 text-sm mt-1">
+                        <p className="text-red-500 text-sm mt-1 ">
                           {errors.name.message}
                         </p>
                       )}
@@ -390,8 +391,14 @@ export default function Page() {
                 </>
               )}
             </div>
-
-            <div className="flex justify-between mt-8">
+            <p className="text-muted-foreground text-start text-xs mt-4 mb-3">
+              By signing up you agree to our{" "}
+              <a className="underline hover:no-underline" href="#">
+                Terms
+              </a>
+              .
+            </p>
+            <div className="flex justify-between ">
               {step > 1 && (
                 <button
                   type="button"
@@ -415,12 +422,20 @@ export default function Page() {
             </div>
           </form>
 
+          <div className="before:bg-border after:bg-border flex items-center gap-3 before:h-px before:flex-1 after:h-px after:flex-1">
+            <span className="text-muted-foreground text-xs">Or</span>
+          </div>
+
+          <Button variant="outline" disabled className="w-full">
+            Continue with Google
+          </Button>
+
           {step === 1 && (
-            <div className="mt-6">
-              <p className="flex mx-auto text-sm font-medium leading-tight text-center text-black">
-                Already member?
+            <div>
+              <p className="text-center text-sm font-medium leading-tight mt-4 text-gray-600">
+                Have and account?
                 <Link
-                  className="font-semibold text-indigo-600 hover:text-indigo-500 ml-1"
+                  className="font-semibold text-indigo-400 hover:text-indigo-500 ml-1"
                   href="/login"
                 >
                   Login
