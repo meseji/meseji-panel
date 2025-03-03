@@ -220,7 +220,7 @@ export default function NewTemplateMessagePage() {
       category: "Category",
       content: "Template content",
     }).find(([key]) => !templateData[key]);
-  
+
     if (missingField) {
       setToast({
         type: "error",
@@ -229,7 +229,7 @@ export default function NewTemplateMessagePage() {
       });
       return;
     }
-  
+
     const cleanedContent = templateData.content.replace(/[\r\n]+/g, " ").trim();
 
     const apiBody = {
@@ -303,7 +303,7 @@ export default function NewTemplateMessagePage() {
     try {
       const response = await createTemplate(apiBody).unwrap();
       router.push("/dashboard/template");
-       alert("Template created successfully");
+      alert("Template created successfully");
     } catch (error) {
       console.error("Error during API call:", error);
       setToast({

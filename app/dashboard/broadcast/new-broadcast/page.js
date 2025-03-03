@@ -4,6 +4,7 @@ import Title from "@/components/ui/Title";
 import React, { useState } from "react";
 import Button from "@/components/ui/Button";
 import MainHeader from "@/components/dashboard/shared/MainHeader";
+import CreateBroadcast from "@/components/dashboard/broadcast/create-broadcast";
 
 export default function Page() {
   const [selected, setSelected] = useState(null);
@@ -167,7 +168,7 @@ export default function Page() {
           </li>
         </ul>
       </div> */}
-      <div className="flex flex-col items-center min-h-screen mt-4">
+      {/* <div className="flex flex-col items-center min-h-screen mt-4">
         <div className="max-w-7xl">
           <p className="text-center text-gray-600">
             How would you like to start?
@@ -246,7 +247,9 @@ export default function Page() {
             </ul>
           </div>
         </div>
-      </div>
+      </div> */}
+
+      <CreateBroadcast />
     </div>
   );
 }

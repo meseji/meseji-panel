@@ -119,7 +119,7 @@ export default function Page() {
               </div>
 
               <table className="w-full text-left bg-zinc-100 text-gray-500">
-                <thead className="text-sm text-gray-700 uppercase bg-gray-50 ">
+                <thead className="text-sm text-gray-700 bg-gray-50 ">
                   <tr>
                     <th scope="col" className="px-4 py-3">
                       <div className="flex items-center">
@@ -135,35 +135,35 @@ export default function Page() {
                         </label>
                       </div>
                     </th>
-                    <th scope="col" className="px-6 py-3">
+                    <th scope="col" className="px-2 py-2  ">
                       Name
                     </th>
-                    <th scope="col" className="px-6 py-3">
+                    <th scope="col" className="px-2 py-2">
                       Number
                     </th>
-                    <th scope="col" className="px-6 py-3">
+                    <th scope="col" className="px-2 py-2">
                       Email
                     </th>
-                    <th scope="col" className="px-6 py-3">
+                    <th scope="col" className="px-2 py-2">
                       Company
                     </th>
-                    <th scope="col" className="px-6 py-3">
+                    <th scope="col" className="px-2 py-2">
                       Type
                     </th>
-                    <th scope="col" className="px-6 py-3">
+                    <th scope="col" className="px-2 py-2">
                       Status
                     </th>
-                    <th scope="col" className="px-6 py-3">
+                    <th scope="col" className="px-2 py-2">
                       Source
                     </th>
-                    <th scope="col" className="px-6 py-3">
+                    <th scope="col" className="px-2 py-2">
                       Category
                     </th>
-                    <th scope="col" className="px-6 py-3">
+                    <th scope="col" className="px-6 py-2">
                       Tags
                     </th>
 
-                    <th scope="col" className="px-6 py-3">
+                    <th scope="col" className="px-2 py-2">
                       Action
                     </th>
                   </tr>

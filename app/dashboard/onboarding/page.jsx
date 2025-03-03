@@ -3,6 +3,7 @@
 import FacebookSDK from "@/components/Track/FacebookSdk";
 import { launchWhatsAppSignup } from "@/lib/utils/FacebookLaunch";
 import { Circle, CircleCheckIcon, Facebook } from "lucide-react";
+import { useSelector } from "react-redux";
 
 const steps = [
   {
@@ -30,47 +31,47 @@ const steps = [
 ];
 
 export default function Page() {
+  const { user } = useSelector((state) => state.auth);
   return (
     <>
       <FacebookSDK />
-      <div className="sm:mx-auto sm:max-w-lg">
-        <h3 className="text-gray-700 font-semibold text-tremor-content-strong dark:text-dark-tremor-content-strong">
-          Hello, Meseji
-        </h3>
-        <p className="text-tremor-default text-tremor-content dark:text-dark-tremor-content">
-          Let&apos;s set up your first whatsapp business account.
-        </p>
-        <ul role="list" className="mt-8 space-y-3">
+      <div className="sm:mx-auto sm:max-w-lg space-y-10 mt-4">
+        <div>
+          <h3 className="text-gray-700 font-semibold text-tremor-content-strong dark:text-dark-tremor-content-strong">
+            Hello, {user?.company_name || user?.name}
+          </h3>
+          <p className="text-tremor-default text-tremor-content dark:text-dark-tremor-content">
+            Let&apos;s set up your first whatsapp business account.
+          </p>
+        </div>
+        <ul role="list" className="space-y-3 border">
           {steps.map((step) =>
             step.type === "done" ? (
               <li key={step.id} className="relative p-4">
                 <div className="flex items-start">
-                  {/* <RiCheckboxCircleFill
-                    className="size-6 shrink-0 text-tremor-brand dark:text-dark-tremor-brand"
-                    aria-hidden={true}
-                  /> */}
-                  <CircleCheckIcon className="size-6 shrink-0 text-green-600 " />
+                  {user?.company_name || user?.name ? (
+                    <CircleCheckIcon className="size-6 shrink-0 text-green-600 " />
+                  ) : (
+                    <CircleCheckIcon className="size-6 shrink-0 text-green-600 " />
+                  )}
+                  {/* <CircleCheckIcon className="size-6 shrink-0 text-green-600 " /> */}
                   <div className="ml-3 w-0 flex-1 pt-0.5">
                     <p className="font-medium leading-5 text-gray-800 dark:text-dark-tremor-content-strong">
-                      <a href={step.href} className="focus:outline-none">
+                      <a href={step?.href} className="focus:outline-none">
                         {/* extend link to entire list card */}
                         <span className="absolute inset-0" aria-hidden={true} />
-                        {step.title}
+                        {step?.title}
                       </a>
                     </p>
                     <p className="mt-1 text-tremor-default leading-6 text-gray-600 dark:text-dark-tremor-content">
-                      {step.description}
+                      {step?.description}
                     </p>
                   </div>
                 </div>
               </li>
-            ) : step.type === "in progress" ? (
+            ) : step?.type === "in progress" ? (
               <li className="rounded-tremor-default bg-gray-200 p-4 ">
                 <div className="flex items-start">
-                  {/* <RiCheckboxBlankCircleLine
-                    className="size-6 shrink-0 text-tremor-brand dark:text-dark-tremor-brand"
-                    aria-hidden={true}
-                  /> */}
                   <Circle className="size-6 shrink-0 text-tremor-brand dark:text-dark-tremor-brand" />
                   <div className="ml-3 w-0 flex-1 pt-0.5">
                     <p className="font-medium leading-5 text-gray-800 dark:text-dark-tremor-content-strong">
@@ -119,17 +120,17 @@ export default function Page() {
             )
           )}
         </ul>
-        <div className="mt-12 rounded-tremor-default bg-gray-200 p-4 dark:bg-dark-tremor-background-muted">
+        <div className="rounded-tremor-default bg-gray-200 p-4 dark:bg-dark-tremor-background-muted">
           <h4 className="text-tremor-default font-medium text-gray-600 dark:text-dark-tremor-content-strong">
             Need help?
           </h4>
           <p className="mt-1 text-tremor-default text-gray-800 dark:text-dark-tremor-content">
             Connect with a member of our team at{" "}
             <a
-              href="mailto:support@company.com"
+              href="mailto:support@meseji.app"
               className="font-medium text-blue-600 dark:text-dark-tremor-brand"
             >
-              support@company.com
+              support@meseji.app
             </a>
             .
           </p>

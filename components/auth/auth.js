@@ -1,9 +1,12 @@
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Auth({ children }) {
+  const path = usePathname();
   return (
-    <section className="grid gap-0 min-h-screen md:grid-cols-2 bg-white">
-      <div className="hidden md:flex items-center justify-center bg-gray-100 rounded-s-xl ml-4 my-4">
+    <section className="flex flex-row h-svh bg-white">
+      {/* banner part */}
+      <div className="hidden md:flex items-center justify-center bg-black rounded-xl ml-4 my-4 w-full lg:w-5/12">
         <div className="mx-auto max-w-md px-5 py-16 md:px-10 md:py-20">
           <div className="flex justify-center">
             <img
@@ -12,23 +15,37 @@ export default function Auth({ children }) {
               alt="meseji"
             />
           </div>
-          <h2 className="mt-6 text-3xl font-extrabold text-center text-gray-900">
-            Welcome back!
-          </h2>
-          <p className="mt-2 text-sm text-center text-gray-600">
-            Log in to your account to continue
-          </p>
+          {path === "/login" ? (
+            <>
+              {" "}
+              <h2 className="mt-6 text-3xl font-extrabold text-center text-gray-200">
+                Welcome back!
+              </h2>
+              <p className="mt-2 text-sm text-center text-gray-300">
+                Log in to your account to continue
+              </p>
+            </>
+          ) : (
+            <>
+              <h2 className="mt-6 text-3xl font-extrabold text-center text-gray-200">
+                Welcome!
+              </h2>
+              <p className="mt-2 text-sm text-center text-gray-300">
+                Onboard with Meseji
+              </p>
+            </>
+          )}
         </div>
       </div>
 
-      <div className="flex flex-col justify-between px-5 py-14 md:px-8 md:py-18 min-h-screen">
-        <div className="flex-grow flex items-center justify-center">
+      <div className="flex flex-col justify-between px-5 py-4 md:px-8 min-h-screen w-full lg:w-7/12">
+        <div className="flex-grow flex items-center justify-center h-[70vh]">
           {children}
         </div>
-        <footer className="w-full max-w-xl mx-auto px-4 sm:px-8 lg:px-10">
+        <footer className="w-full mx-auto px-4 sm:px-8 lg:px-10">
           <div className="flex flex-wrap justify-between items-center gap-2">
             <div>
-              <p className="text-sm text-gray-600">© 2024 Meseji</p>
+              <p className="text-sm text-gray-600">© 2025 Meseji</p>
             </div>
 
             <div className="space-x-4 text-sm">
