@@ -226,7 +226,6 @@ export default function Page() {
     defaultValues: formData,
   });
 
-  console.log(formData);
   const onSubmit = async (data) => {
     if (step === 1) {
       setFormData({ ...formData, ...data });

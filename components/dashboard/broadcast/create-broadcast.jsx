@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { campaignSchedulerSchema } from "@/lib/utils/schemas";
+import { useCreateCampaignMutation } from "@/lib/features/api/whatsappCampaignApiSlice";
+import Select from "../shared/selectDemo";
+import { useGetAllTemplateQuery } from "@/lib/features/api/whatsappTemplateApiSlice";
 
 export default function CreateBroadcast() {
+  const [approvedTemplates, setApproveTemplates] = useState([]);
+  const [selectedTemplate, setSelectedTemplate] = useState({});
   const {
     control,
     register,
@@ -13,12 +18,63 @@ export default function CreateBroadcast() {
     resolver: zodResolver(campaignSchedulerSchema),
   });
 
-  const onSubmit = (data) => {
+  const {
+    data: getAllTemplates,
+    isLoading: loadingAllTemplates,
+    refetch: refetchAllTemplates,
+  } = useGetAllTemplateQuery();
+
+  const [createCampaign, { isLoading: loadingcampaign }] =
+    useCreateCampaignMutation();
+
+  const onSubmit = async (data) => {
+    // const payload = {
+    //   campaignName: campaignName,
+    //   templateId: selectedTemplate.id,
+    //   paramsDatas: formattedContacts,
+    // };
+    try {
+      // const response = await createCampaign(payload).unwrap();
+      // console.log("Response:", response);
+    } catch (error) {
+      console.error("Error creating campaign:", error);
+      // setError("Failed to create campaign. Please try again later.");
+    }
     console.log("Campaign Data:", data);
     // Call API to schedule campaign with selected details
   };
+
+  useEffect(() => {
+    if (getAllTemplates?.data?.apiData?.data.length) {
+      const approvedTemplates = getAllTemplates?.data?.apiData?.data.filter(
+        (template) => template.status === "APPROVED"
+      );
+      setApproveTemplates(approvedTemplates);
+    }
+  }, [getAllTemplates]);
+
+  const groupedData = approvedTemplates.reduce((acc, item) => {
+    const { category, id, name } = item;
+    const existingCategory = acc.find((group) => group.category === category);
+
+    if (existingCategory) {
+      existingCategory.items.push({ value: id, label: name });
+    } else {
+      acc.push({
+        category,
+        items: [{ value: id, label: name }],
+      });
+    }
+
+    return acc;
+  }, []);
+  const handleTemplateChange = (tempId) => {
+    const findTemaplate = approvedTemplates.find((temp) => temp.id === tempId);
+    setSelectedTemplate(findTemaplate);
+    setVariables({});
+  };
   return (
-    <div className="relative p-4 mx-auto w-full max-w-full md:max-w-sm lg:max-w-md">
+    <div className="relative p-4 mx-auto w-full max-w-full md:max-w-sm lg:max-w-lg">
       {/* <div className="w-full space-y-4 min-w-4xl flex flex-col justify-center items-center"> */}
       {/* Sender Number Selection */}
       <div className="mx-auto w-full space-y-3">
@@ -27,7 +83,7 @@ export default function CreateBroadcast() {
             htmlFor="campaignName"
             className="block text-sm font-medium leading-6 text-gray-900"
           >
-          Campaign Name
+            Campaign Name
           </label>
           <div className="mt-2">
             <Controller
@@ -42,12 +98,34 @@ export default function CreateBroadcast() {
                 />
               )}
             />
-            {errors.email && (
+            {errors.campaignName && (
               <p className="text-red-500 text-sm mt-1">
-                {errors.email.message}
+                {errors.campaignName.message}
               </p>
             )}
           </div>
+        </div>
+        <div className="mt-2">
+          <Controller
+            name="templateId"
+            control={control}
+            render={({ field }) => (
+              <Select
+                {...field}
+                options={groupedData}
+                label="Template"
+                groupKey="category"
+                valueKey="value"
+                labelKey="label"
+                onChange={handleTemplateChange}
+              />
+            )}
+          />
+          {errors.campaignName && (
+              <p className="text-red-500 text-sm mt-1">
+                {errors.campaignName.message}
+              </p>
+            )}
         </div>
 
         {/* <div>
@@ -75,7 +153,6 @@ export default function CreateBroadcast() {
             className="block w-full rounded-md border p-2 ps-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2"
           >
             <option value="">Select User List</option>
-            
           </select>
           {errors.userList && (
             <p className="text-red-500 text-sm mt-1">
